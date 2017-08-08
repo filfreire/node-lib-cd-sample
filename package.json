@@ -4,7 +4,7 @@
   "description": "Continuous delivery pipeline sample for node.js package",
   "main": "index.js",
   "scripts": {
-    "test": "Not Specified"
+    "test": "mocha src/tests/javascript/hello-test.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
     "Pipeline"
   ],
   "author": "Guillaume Pichot",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1"
+  }
 }
