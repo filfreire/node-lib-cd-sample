@@ -1,0 +1,22 @@
+{
+  "name": "node-package-cd-sample",
+  "version": "1.0.0",
+  "description": "Continuous delivery pipeline sample for node.js package",
+  "main": "index.js",
+  "scripts": {
+    "test": "Not Specified"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.corp.ebay.com:gpichot/node-package-cd-sample.git"
+  },
+  "keywords": [
+    "Continuous",
+    "Delivery",
+    "Jenkins",
+    "DSL",
+    "Pipeline"
+  ],
+  "author": "Guillaume Pichot",
+  "license": "ISC"
+}
