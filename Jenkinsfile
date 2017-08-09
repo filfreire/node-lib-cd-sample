@@ -4,8 +4,8 @@ def teamDL = env.TEAM_DL
 
 node {
     stage('Setup Git') {
-        gitDo "config --global user.name jenkins"
-        gitDo "config --global user.email ${teamDL}"
+        sh "git config --global user.name jenkins"
+        sh "git config --global user.email ${teamDL}"
     }
     stage('Checkout') {
         checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: "${githubCredential}", url: 'git@github.corp.ebay.com:gpichot/node-package-cd-sample.git']]]
