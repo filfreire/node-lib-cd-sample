@@ -12,4 +12,8 @@ node {
     stage('Test') {
         sh 'npm test'
     }
+    stage('Version'){
+        sh 'npm version patch'
+        sh 'git push origin master'
+    }
 }
