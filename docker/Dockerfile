@@ -23,3 +23,6 @@ RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 USER root
 COPY node-package-delivery-pipeline-config.xml /var/jenkins_home/jobs/node-package-delivery-pipeline/config.xml
 RUN chown -R jenkins:jenkins /var/jenkins_home/jobs/
+
+# Bypass Jenkins setup wizard
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false

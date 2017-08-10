@@ -1,6 +1,6 @@
 # Continuous Delivery Pipeline for a node.js package
 
-This project demonstrate how the source code of a node.js package can be bundled with the continuous delivery pipeline for building, testing, publishing and versioning this package using Jenkins Pipeline and with a preconfigured Jenkins described via a Dockerfile that can be used to build the corresponding image that will be run in a Docker container.
+This project demonstrates how the source code of a node.js package can be bundled with the continuous delivery pipeline for building, testing, publishing and versioning this package using Jenkins Pipeline and with a preconfigured Jenkins described via a Dockerfile that can be used to build the corresponding image that will be run in a Docker container.
 
 ## Requirements
 
