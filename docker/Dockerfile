@@ -18,3 +18,8 @@ USER jenkins
 # Install Jenkins Plugins
 COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+
+# Restore pipeline job
+USER root
+COPY node-package-delivery-pipeline-config.xml /var/jenkins_home/jobs/node-package-delivery-pipeline/config.xml
+RUN chown -R jenkins:jenkins /var/jenkins_home/jobs/
