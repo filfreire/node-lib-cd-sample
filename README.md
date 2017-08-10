@@ -12,13 +12,7 @@ This project demonstrates how the source code of a node.js package can be bundle
 ## How to say hello
 
 ```javascript
-$ node
-> var hello = require('./hello.js');
-undefined
-> hello
-[Function]
-> hello()
-'Hello World!'
+npm start
 ```
 
 ## How to run the test
