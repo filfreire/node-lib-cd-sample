@@ -4,11 +4,13 @@ FROM jenkins/jenkins
 # Install Node.js
 USER root
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
-    apt-get install -y nodejs
+    apt-get install -y \
+      nodejs \
+      vim
 
 # Confirm Node.js installation
 RUN node -v
 RUN npm -v
 
 # Installation complete
-USER jenkins 
+USER jenkins
