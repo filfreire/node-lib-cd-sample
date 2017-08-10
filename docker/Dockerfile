@@ -12,5 +12,9 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 RUN node -v
 RUN npm -v
 
-# Installation complete
+# Complete Jenkins Installation
 USER jenkins
+
+# Install Jenkins Plugins
+COPY plugins.txt /usr/share/jenkins/ref/
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
