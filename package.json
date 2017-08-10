@@ -4,7 +4,8 @@
   "description": "Continuous delivery pipeline sample for node.js package",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/tests/javascript/hello-test.js"
+    "test": "mocha src/tests/javascript/hello-test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
