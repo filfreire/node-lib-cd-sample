@@ -24,6 +24,6 @@ node {
         }
     }
     stage('Complete Build'){
-        sh echo 'Well done!'
+        echo 'Well Done!'
     }
 }
