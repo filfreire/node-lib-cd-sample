@@ -23,4 +23,7 @@ node {
           sh 'git push origin master'
         }
     }
+    stage('Complete Build'){
+        sh echo 'Well done!'
+    }
 }
