@@ -1,5 +1,7 @@
 # Continuous Delivery Pipeline for a node.js package
 
+This project demonstrate how the source code of a node.js package can be bundled with the continuous delivery pipeline for building, testing, publishing and versioning this package using Jenkins Pipeline and with a preconfigured Jenkins described via a Dockerfile that can be used to build the corresponding image that will be run in a Docker container.
+
 ## Requirements
 
 * Node: recommended version is v6.11.2
@@ -56,3 +58,13 @@ Jenkins.instance.pluginManager.plugins.each{
 * Pipeline Job Configuration:
 
 The config.xml file for a job is available from *http://{jenkins-url}/{job-name}/config.xml*
+
+## Jenkins Job Configuration
+
+* Configure github credential
+
+The pipeline requires credential for checking out a git repository and pushing version update to the remote repository.
+1. Open the pipeline job Configuration
+2. Navigate to the 'Build Triggers/Pipeline' section
+3. Add new credentials for connecting to github (e.g. SSH key)
+4. Make sure that the ID defined for the credentials matches the one for the job parameter 'GITHUB_CREDENTIALS'
