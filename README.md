@@ -30,20 +30,21 @@ npm test
 
 Jenkins Community image: https://hub.docker.com/r/jenkins/jenkins/ (version 2.73)
 
-Build docker image (from /docker):
+* Build docker image (from /docker):
 
 ```bash
 docker build -t jenkins-nodejs-sample .
 ```
 
-Run docker image:
+* Run docker image:
 
 ```bash
 docker run -p 8080:8080 -p 50000:50000 jenkins-nodejs-sample
 ```
 
-Plugins:
-List Jenkins plugins: from http://{jenkins-url}/script
+* List Jenkins Plugins:
+
+List Jenkins plugins from *http://{jenkins-url}/script*
 
 ```groovy
 Jenkins.instance.pluginManager.plugins.each{
@@ -52,6 +53,6 @@ Jenkins.instance.pluginManager.plugins.each{
 }
 ```
 
-* SSH Agent Plugin
+* Pipeline Job Configuration:
 
-Path to initial password: /var/jenkins_home/secrets/initialAdminPassword
+The config.xml file for a job is available from *http://{jenkins-url}/{job-name}/config.xml*
