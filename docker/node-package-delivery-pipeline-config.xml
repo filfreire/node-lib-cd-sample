@@ -1,6 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job@2.14.1">
-  <actions/>
+  <actions>
+    <io.jenkins.blueocean.service.embedded.BlueOceanUrlAction plugin="blueocean-rest-impl@1.1.6">
+      <blueOceanUrlObject class="io.jenkins.blueocean.service.embedded.BlueOceanUrlObjectImpl">
+        <mappedUrl>blue/organizations/jenkins/node-package-delivery-pipeline</mappedUrl>
+      </blueOceanUrlObject>
+    </io.jenkins.blueocean.service.embedded.BlueOceanUrlAction>
+  </actions>
   <description>Continuous Delivery Pipeline for node package.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -23,7 +29,11 @@
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
-      <triggers/>
+      <triggers>
+        <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.28.0">
+          <spec></spec>
+        </com.cloudbees.jenkins.GitHubPushTrigger>
+      </triggers>
     </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.39">
@@ -42,7 +52,11 @@
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
       <submoduleCfg class="list"/>
-      <extensions/>
+      <extensions>
+        <hudson.plugins.git.extensions.impl.UserExclusion>
+          <excludedUsers>jenkins</excludedUsers>
+        </hudson.plugins.git.extensions.impl.UserExclusion>
+      </extensions>
     </scm>
     <scriptPath>Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
