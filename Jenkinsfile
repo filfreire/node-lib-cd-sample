@@ -20,7 +20,13 @@ node {
     stage('Version'){
         sh 'npm version patch'
         sshagent([githubCredential]) {
+          sh 'git push --set-upstream origin master'
+        }
+        sshagent([githubCredential]) {
           sh 'git push origin master'
+        }
+        sshagent([githubCredential]) {
+          sh "git push --follow-tags"
         }
     }
     stage('Complete Build'){
