@@ -71,6 +71,16 @@ docker tag {image ID} {docker registry url}/{repository}/jenkins-nodejs-sample:{
 docker push {docker registry url}/{repository}/jenkins-nodejs-sample:{version}
 ```
 
+### Deploy and Run Docker Image
+
+```bash
+# RETRIEVE THE DOCKER IMAGE FROM REGISTRY
+docker login {docker registry url}
+docker pull {docker registry url}/{repository}/jenkins-nodejs-sample:{version}
+docker images
+docker run -p 8080:8080 -p 50000:50000 {image ID}
+```
+
 ## Jenkins Job Configuration
 
 * Configure github credential
