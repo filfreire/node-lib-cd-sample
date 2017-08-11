@@ -9,7 +9,16 @@ This project demonstrates how the source code of a node.js package can be bundle
 * Test Runner: Mocha - recommended version is 3.5.0
 * Docker: https://docs.docker.com/ - recommended version 17.06.0-ce
 
-## How to say hello
+## Useful Links
+
+* Node.js: https://nodejs.org
+* NPM: https://www.npmjs.com/
+* Docker: https://www.docker.com/
+* Jenkins: https://jenkins.io/
+* Jenkins Pipeline: https://jenkins.io/doc/book/pipeline/
+* Mocha: https://mochajs.org/
+
+## How to say hello world!
 
 ```javascript
 npm start
@@ -52,6 +61,15 @@ Jenkins.instance.pluginManager.plugins.each{
 * Pipeline Job Configuration:
 
 The config.xml file for a job is available from *http://{jenkins-url}/{job-name}/config.xml*
+
+### Publish Docker Image
+
+```bash
+docker images
+docker login {docker registry url}
+docker tag {image ID} {docker registry url}/{repository}/jenkins-nodejs-sample:{version}
+docker push {docker registry url}/{repository}/jenkins-nodejs-sample:{version}
+```
 
 ## Jenkins Job Configuration
 
