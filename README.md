@@ -35,13 +35,14 @@ npm test
 
 Jenkins Community image: https://hub.docker.com/r/jenkins/jenkins/ (version 2.73)
 
-* Build docker image (from /docker):
+* Build docker image locally (from /docker):
+
 
 ```bash
 docker build -t jenkins-nodejs-sample .
 ```
 
-* Run docker image:
+* Run docker image locally:
 
 ```bash
 docker run -p 8080:8080 -p 50000:50000 jenkins-nodejs-sample
