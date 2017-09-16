@@ -91,3 +91,7 @@ The pipeline requires credential for checking out a git repository and pushing v
 2. Navigate to the 'Build Triggers/Pipeline' section
 3. Add new credentials for connecting to github (e.g. SSH key)
 4. Make sure that the ID defined for the credentials matches the one for the job parameter 'GITHUB_CREDENTIALS'
+
+## Continuous Integration on C3
+
+CI is currently hosted on: http://node-docker-jenkins-2509443.slc01.dev.ebayc3.com:8080/
