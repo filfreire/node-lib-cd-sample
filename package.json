@@ -1,6 +1,6 @@
 {
   "name": "node-package-cd-sample",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Continuous delivery pipeline sample for node.js package",
   "main": "index.js",
   "scripts": {
