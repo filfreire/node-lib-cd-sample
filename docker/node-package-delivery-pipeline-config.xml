@@ -11,7 +11,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.0">
-      <projectUrl>https://github.corp.ebay.com/gpichot/node-package-cd-sample/</projectUrl>
+      <projectUrl>https://github.com/stounio/node-lib-cd-sample/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.model.ParametersDefinitionProperty>
@@ -41,7 +41,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>git@github.corp.ebay.com:gpichot/node-package-cd-sample.git</url>
+          <url>git@github.com:stounio/node-lib-cd-sample.git</url>
           <credentialsId>gpichot-github</credentialsId>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
